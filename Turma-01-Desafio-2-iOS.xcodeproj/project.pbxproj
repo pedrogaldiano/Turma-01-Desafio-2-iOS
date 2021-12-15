@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E36DE9E276A68F800338252 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36DE9D276A68F800338252 /* SearchBar.swift */; };
 		4E6BF251276A4D210019E4C4 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6BF250276A4D210019E4C4 /* RepositoryCell.swift */; };
 		4EAA7605276A361100C68B0E /* Turma_01_Desafio_2_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA7604276A361100C68B0E /* Turma_01_Desafio_2_iOSApp.swift */; };
 		4EAA7607276A361100C68B0E /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA7606276A361100C68B0E /* RepositoriesView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E36DE9D276A68F800338252 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		4E6BF250276A4D210019E4C4 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		4EAA7601276A361100C68B0E /* Turma-01-Desafio-2-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turma-01-Desafio-2-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EAA7604276A361100C68B0E /* Turma_01_Desafio_2_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turma_01_Desafio_2_iOSApp.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				4EAA7623276A49FB00C68B0E /* UserView.swift */,
 				4E6BF250276A4D210019E4C4 /* RepositoryCell.swift */,
+				4E36DE9D276A68F800338252 /* SearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			files = (
 				4EAA7607276A361100C68B0E /* RepositoriesView.swift in Sources */,
 				4EAA7624276A49FB00C68B0E /* UserView.swift in Sources */,
+				4E36DE9E276A68F800338252 /* SearchBar.swift in Sources */,
 				4EAA7605276A361100C68B0E /* Turma_01_Desafio_2_iOSApp.swift in Sources */,
 				4E6BF251276A4D210019E4C4 /* RepositoryCell.swift in Sources */,
 			);

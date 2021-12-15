@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct RepositoriesView: View {
+    @State private var searchText = ""
     var body: some View {
         
-//        TextField(
-        
-        List(0..<30) { _ in
-            RepositoryCell()
+        NavigationView{
             
+            List(0..<30) { _ in
+                RepositoryCell()
+                
+            }
         }
-
+        .searchable(text: $searchText)
+        
     }
 }
 
