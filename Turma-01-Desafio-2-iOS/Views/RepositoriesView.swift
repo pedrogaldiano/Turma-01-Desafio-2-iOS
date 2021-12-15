@@ -12,19 +12,23 @@ struct RepositoriesView: View {
     
     var body: some View {
         
-        VStack() {
-
+        VStack {
+            
             Text("Repositórios em Swift 🍎")
                 .bold()
                 .font(.title)
                 .padding(.horizontal)
                 .padding(.bottom, 0)
-        
+
             SearchBar(repoSearched: $searchText)
-            
-            List(0..<30) { _ in
-                RepositoryCell()
-                
+
+            NavigationView {
+                List(0..<30) { _ in
+                    NavigationLink(destination: PullsView(urlPullsRequests: "link pros PR"), label: {
+                        RepositoryCell()
+                        
+                    })
+                }//.padding(.top, -180)  //GAMBIARRA -- TIRAR DÚVIDA
             }
         }
     }
