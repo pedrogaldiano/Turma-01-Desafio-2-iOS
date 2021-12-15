@@ -11,7 +11,7 @@ import SwiftUI
 struct Turma_01_Desafio_2_iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RepositoriesView()
         }
     }
 }
