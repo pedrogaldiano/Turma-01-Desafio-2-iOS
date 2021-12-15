@@ -9,17 +9,24 @@ import SwiftUI
 
 struct RepositoriesView: View {
     @State private var searchText = ""
+    
     var body: some View {
         
-        NavigationView{
+        VStack() {
+
+            Text("Repositórios em Swift 🍎")
+                .bold()
+                .font(.title)
+                .padding(.horizontal)
+                .padding(.bottom, 0)
+        
+            SearchBar(repoSearched: $searchText)
             
             List(0..<30) { _ in
                 RepositoryCell()
                 
             }
         }
-        .searchable(text: $searchText)
-        
     }
 }
 
