@@ -2,28 +2,30 @@ import Foundation
 import SwiftUI
 
 struct RepositoryCell: View {
+    var repo: Item
+
     var body: some View {
         VStack(alignment: .leading, spacing: 3) {
 
-            Text("nome do repodasdadadsadasdsadadasdsasdadsas")
+            Text(repo.name)
                 .bold()
                 .font(.title2)
                 .lineLimit(1)
 
-            UserView()
+            UserView(owner: repo.owner)
 
-            Text("hgfhfgh hfhfg hfhfghf descrição")
+            Text(repo.description ?? "")
                 .font(.body)
                 .fontWeight(.light)
                 .lineLimit(2)
                 .multilineTextAlignment(.leading)
 
             HStack(spacing: 10) {
-                Label("120", systemImage: "tuningfork")
+                Label("\(repo.forksCount)", systemImage: "tuningfork")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
 
-                Label("3565", systemImage: "star")
+                Label("\(repo.stargazersCount)", systemImage: "star")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
             }

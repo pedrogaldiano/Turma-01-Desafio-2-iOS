@@ -7,9 +7,9 @@ struct RepositoriesView: View {
     var body: some View {
 
         NavigationView {
-            List { ForEach(repos.repositories.items) { _ in
-                NavigationLink(destination: PullsView(urlPullsRequests: "String"), label: {
-                    RepositoryCell()
+            List { ForEach(repos.repositories.items) { repo in
+                NavigationLink(destination: PullsView(urlPullsRequests: repo.pullsUrl), label: {
+                    RepositoryCell(repo: repo)
                 })
             }
 
@@ -26,28 +26,6 @@ struct RepositoriesView: View {
             print(searchText)
         }
     }
-
-    //    var body: some View {
-    //            if let repos = repo.repositories.items {
-    //                List { ForEach(repos, id: \.self) { _ in
-    //                    NavigationLink(destination: PullsView(urlPullsRequests: "aa"), label: {
-    //                        RepositoryCell()
-    //
-    //                    })
-    //                }
-    //                .navigationTitle("Repos em Swift")
-    //                    .navigationBarItems(leading: Button("API Call") {
-    //                        repo.searchSwiftRepoByName()
-    //                        print("api called")
-    //                })}
-    //                .navigationViewStyle(.stack)
-    //                .searchable(text: $searchText)
-    //                .onSubmit(of: .search) {
-    //                    print(searchText)
-    //                }
-    //            }
-    //        }
-    //    }
 
 }
 

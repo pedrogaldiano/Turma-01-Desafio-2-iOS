@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 struct UserView: View {
-//    var user: User
+    let owner: Owner
 
     var body: some View {
         HStack {
@@ -12,7 +12,7 @@ struct UserView: View {
                 .frame(height: 30)
                 .cornerRadius(10)
 
-            Text("Nome do Ser ômano2")
+            Text(owner.login)
                 .fontWeight(.medium)
                 .lineLimit(1)
                 .font(.title3)

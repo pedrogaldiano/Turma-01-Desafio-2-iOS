@@ -21,7 +21,7 @@ struct PullRequestCell: View {
                     .frame(width: 15, height: 15, alignment: .topTrailing)
 
             }
-            UserView()
+//            UserView(owner: pr.owner)
 
             Text("hgfhfgh hfhfg hfhfghf descriçãodescriçãodescriçãodescriçãodescrição")
                 .font(.body)
