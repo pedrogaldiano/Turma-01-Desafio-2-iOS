@@ -1,26 +1,30 @@
 import SwiftUI
 
 struct PullsView: View {
-    var urlPullsRequests: String
+    var urlPullRequests: String
+    var repoName: String
+    @StateObject var pulls = PullViewModel()
 
     var body: some View {
 
-            NavigationView {
-                List(0..<30) { _ in
-                        PullRequestCell()
-                        .foregroundColor(.black)
-                }
-                .navigationTitle("Nome do Repo")
+        NavigationView {
+            List(pulls.pulls) { pull in
+                PullRequestCell(pull: pull)
+                    .foregroundColor(.black)
             }
-            .navigationTitle("Pull Requests")
-            .navigationViewStyle(.stack)
+            .navigationTitle(repoName)
+            .navigationBarItems(leading: Button("API Call") {
+                pulls.getPullRequestsFromRepo(url: urlPullRequests)
+                print("api called")
+            })
 
+//            .onAppear {
+//                pulls.getPullRequestsFromRepo(url: urlPullRequests)
+//            }
         }
+        .navigationTitle("Pull Requests")
+        .navigationViewStyle(.stack)
 
-}
-
-struct PullsView_Previews: PreviewProvider {
-    static var previews: some View {
-        PullsView(urlPullsRequests: "link pros PR")
     }
+
 }

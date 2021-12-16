@@ -13,8 +13,3 @@ struct Item: Hashable, Codable, Identifiable {
     let stargazersCount: Int
     let forksCount: Int
 }
-
-struct Owner: Hashable, Codable {
-    let login: String
-    let avatarUrl: String
-}

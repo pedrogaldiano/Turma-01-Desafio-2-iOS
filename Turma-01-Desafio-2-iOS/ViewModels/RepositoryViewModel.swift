@@ -1,9 +1,9 @@
 import Foundation
 
-final class RepositoriesViewModel: ObservableObject {
+final class RepositoryViewModel: ObservableObject {
     @Published var repositories = Repositories(items: [])
 
-    func searchSwiftRepoByName(repoName: String = "abc") {
+    func searchSwiftRepoByName(repoName: String = "") {
         guard let url = URL(string: "https://api.github.com/search/" +
                             "repositories?q=\(repoName)language:Swift&sort=stars&page=1")
         else { return }
@@ -18,7 +18,7 @@ final class RepositoriesViewModel: ObservableObject {
 
                 DispatchQueue.main.async {
                     self?.repositories = response
-                    print(String(describing: self?.repositories))
+//                    print(String(describing: self?.repositories))
                 }
             } catch {
                 print("ERROR:\n\(error)\n\n")

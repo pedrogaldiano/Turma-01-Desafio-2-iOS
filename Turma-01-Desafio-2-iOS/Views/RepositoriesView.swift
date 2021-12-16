@@ -2,13 +2,13 @@ import SwiftUI
 
 struct RepositoriesView: View {
     @State private var searchText = ""
-    @StateObject var repos = RepositoriesViewModel()
+    @StateObject var repos = RepositoryViewModel()
 
     var body: some View {
 
         NavigationView {
             List { ForEach(repos.repositories.items) { repo in
-                NavigationLink(destination: PullsView(urlPullsRequests: repo.pullsUrl), label: {
+                NavigationLink(destination: PullsView(urlPullRequests: repo.pullsUrl, repoName: repo.name), label: {
                     RepositoryCell(repo: repo)
                 })
             }
@@ -17,7 +17,6 @@ struct RepositoriesView: View {
             .navigationTitle("Repos em Swift")
             .navigationBarItems(leading: Button("API Call") {
                 repos.searchSwiftRepoByName()
-                print("api called")
             })
         }
         .navigationViewStyle(.stack)

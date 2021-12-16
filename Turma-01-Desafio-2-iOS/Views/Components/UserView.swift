@@ -15,7 +15,6 @@ struct UserView: View {
             .frame(width: 30, height: 30)
             .cornerRadius(35)
 
-
             Text(owner.login)
                 .fontWeight(.medium)
                 .lineLimit(1)
