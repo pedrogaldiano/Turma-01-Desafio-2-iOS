@@ -13,10 +13,15 @@ struct RepositoriesView: View {
                 }
                 .navigationTitle("Repos em Swift")
             }
-            .searchable(text: .constant(""))
             .navigationViewStyle(.stack)
+            .searchable(text: $searchText)
+            .onSubmit(of: .search) {
+                print(searchText)
+            }
     }
+
 }
+
 
 
 struct ContentView_Previews: PreviewProvider {
