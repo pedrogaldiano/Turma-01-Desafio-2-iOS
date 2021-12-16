@@ -6,11 +6,15 @@ struct UserView: View {
 
     var body: some View {
         HStack {
-            Image("img_generica")
-                .resizable()
-                .scaledToFit()
-                .frame(height: 30)
-                .cornerRadius(10)
+            AsyncImage(url: URL(string: owner.avatarUrl)) { image in
+                image.resizable()
+                    .scaledToFit()
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 30, height: 30)
+            .cornerRadius(35)
+
 
             Text(owner.login)
                 .fontWeight(.medium)

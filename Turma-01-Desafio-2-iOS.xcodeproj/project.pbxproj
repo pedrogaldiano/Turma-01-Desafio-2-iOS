@@ -50,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				4E36DE9F276A873700338252 /* PullsView.swift */,
-				4E36DEA1276A8E2B00338252 /* PullRequestCell.swift */,
 				4EAA7606276A361100C68B0E /* RepositoriesView.swift */,
 				4E6BF253276A4D590019E4C4 /* Components */,
 			);
@@ -60,6 +59,7 @@
 		4E6BF253276A4D590019E4C4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4E36DEA1276A8E2B00338252 /* PullRequestCell.swift */,
 				4EAA7623276A49FB00C68B0E /* UserView.swift */,
 				4E6BF250276A4D210019E4C4 /* RepositoryCell.swift */,
 				4E36DE9D276A68F800338252 /* SearchBar.swift */,

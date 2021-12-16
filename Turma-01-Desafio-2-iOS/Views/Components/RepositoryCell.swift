@@ -9,12 +9,12 @@ struct RepositoryCell: View {
 
             Text(repo.name)
                 .bold()
-                .font(.title2)
+                .font(.title3)
                 .lineLimit(1)
 
             UserView(owner: repo.owner)
 
-            Text(repo.description ?? "")
+            Text(repo.description ?? "[No description]")
                 .font(.body)
                 .fontWeight(.light)
                 .lineLimit(2)
