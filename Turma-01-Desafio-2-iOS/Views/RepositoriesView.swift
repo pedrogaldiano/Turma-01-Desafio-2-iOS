@@ -2,6 +2,7 @@ import SwiftUI
 
 struct RepositoriesView: View {
     @State private var searchText = ""
+    @StateObject var repo = RepositoriesViewModel()
 
     var body: some View {
 
@@ -12,6 +13,10 @@ struct RepositoriesView: View {
                 })
             }
             .navigationTitle("Repos em Swift")
+                        .navigationBarItems(leading: Button("API Call") {
+                            repo.searchSwiftRepoByName()
+                            print("api called")
+                    })
         }
         .navigationViewStyle(.stack)
         .searchable(text: $searchText)
@@ -19,6 +24,28 @@ struct RepositoriesView: View {
             print(searchText)
         }
     }
+
+//    var body: some View {
+//            if let repos = repo.repositories.items {
+//                List { ForEach(repos, id: \.self) { _ in
+//                    NavigationLink(destination: PullsView(urlPullsRequests: "aa"), label: {
+//                        RepositoryCell()
+//
+//                    })
+//                }
+//                .navigationTitle("Repos em Swift")
+            //                    .navigationBarItems(leading: Button("API Call") {
+            //                        repo.searchSwiftRepoByName()
+            //                        print("api called")
+            //                })}
+//                .navigationViewStyle(.stack)
+//                .searchable(text: $searchText)
+//                .onSubmit(of: .search) {
+//                    print(searchText)
+//                }
+//            }
+//        }
+//    }
 
 }
 
