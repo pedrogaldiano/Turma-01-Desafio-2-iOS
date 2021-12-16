@@ -1,7 +1,7 @@
 import Foundation
 
 final class RepositoriesViewModel: ObservableObject {
-    @Published var repositories = Repositories(items: nil)
+    @Published var repositories = Repositories(items: [])
 
     func searchSwiftRepoByName(repoName: String = "abc") {
         guard let url = URL(string: "https://api.github.com/search/" +

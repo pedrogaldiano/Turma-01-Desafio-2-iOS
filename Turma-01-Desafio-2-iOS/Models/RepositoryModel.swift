@@ -1,10 +1,11 @@
 import Foundation
 
  struct Repositories: Hashable, Codable {
-     let items: [Item]?
+     let items: [Item]
  }
 
-struct Item: Hashable, Codable {
+struct Item: Hashable, Codable, Identifiable {
+    let id: Int
     let name: String
     let owner: Owner
     let description: String?
