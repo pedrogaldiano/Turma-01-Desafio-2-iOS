@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct PullsView: View {
-    var urlPullRequests: String
+    var fullName: String
     var repoName: String
     @StateObject var pulls = PullViewModel()
 
@@ -14,7 +14,7 @@ struct PullsView: View {
             }
             .navigationTitle(repoName)
             .navigationBarItems(leading: Button("API Call") {
-                pulls.getPullRequestsFromRepo(url: urlPullRequests)
+                pulls.getPullRequestsFromRepo(fullName: fullName)
                 print("api called")
             })
 

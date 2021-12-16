@@ -9,7 +9,7 @@ struct Item: Hashable, Codable, Identifiable {
     let name: String
     let owner: Owner
     let description: String?
-    let pullsUrl: String
+    let fullName: String
     let stargazersCount: Int
     let forksCount: Int
 }

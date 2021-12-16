@@ -8,7 +8,7 @@ struct RepositoriesView: View {
 
         NavigationView {
             List { ForEach(repos.repositories.items) { repo in
-                NavigationLink(destination: PullsView(urlPullRequests: repo.pullsUrl, repoName: repo.name), label: {
+                NavigationLink(destination: PullsView(fullName: repo.fullName, repoName: repo.name), label: {
                     RepositoryCell(repo: repo)
                 })
             }
