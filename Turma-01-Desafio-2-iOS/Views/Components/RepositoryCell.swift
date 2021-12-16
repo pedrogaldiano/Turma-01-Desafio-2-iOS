@@ -1,10 +1,3 @@
-//
-//  RepositoryCell.swift
-//  Turma-01-Desafio-2-iOS
-//
-//  Created by PEDRO GALDIANO DE CASTRO on 15/12/21.
-//
-
 import Foundation
 import SwiftUI
 
@@ -39,4 +32,3 @@ struct RepositoryCell: View {
         }
     }
 }
-

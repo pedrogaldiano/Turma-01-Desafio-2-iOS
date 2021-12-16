@@ -1,21 +1,24 @@
-//
-//  PullsView.swift
-//  Turma-01-Desafio-2-iOS
-//
-//  Created by PEDRO GALDIANO DE CASTRO on 15/12/21.
-//
-
 import SwiftUI
 
 struct PullsView: View {
     var urlPullsRequests: String
     
     var body: some View {
-        VStack {
+
+            
+            NavigationView {
+                List(0..<30) { _ in
+                        PullRequestCell()
+                        .foregroundColor(.black)
+                }
+                .navigationTitle("Nome do Repo")
+            }
+            .navigationTitle("Pull Requests")
+            .navigationViewStyle(.stack)
             
         }
         
-    }
+
 }
 
 struct PullsView_Previews: PreviewProvider {
