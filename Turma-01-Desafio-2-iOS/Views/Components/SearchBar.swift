@@ -1,7 +1,7 @@
-//import Foundation
-//import SwiftUI
+// import Foundation
+// import SwiftUI
 //
-//struct SearchBar: View{
+// struct SearchBar: View{
 //    @Binding var repoSearched: String
 //    @State private var isEditing = false
 //
@@ -48,5 +48,5 @@
 //            }
 //        }
 //    }
-//}
+// }
 //

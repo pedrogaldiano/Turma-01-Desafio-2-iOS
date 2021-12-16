@@ -2,10 +2,9 @@ import SwiftUI
 
 struct PullsView: View {
     var urlPullsRequests: String
-    
+
     var body: some View {
 
-            
             NavigationView {
                 List(0..<30) { _ in
                         PullRequestCell()
@@ -15,9 +14,8 @@ struct PullsView: View {
             }
             .navigationTitle("Pull Requests")
             .navigationViewStyle(.stack)
-            
+
         }
-        
 
 }
 
