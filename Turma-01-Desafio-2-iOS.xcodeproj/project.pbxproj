@@ -11,7 +11,7 @@
 		4E36DEA0276A873700338252 /* PullsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36DE9F276A873700338252 /* PullsView.swift */; };
 		4E36DEA2276A8E2B00338252 /* PullRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36DEA1276A8E2B00338252 /* PullRequestCell.swift */; };
 		4E6BF251276A4D210019E4C4 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6BF250276A4D210019E4C4 /* RepositoryCell.swift */; };
-		4EAA7605276A361100C68B0E /* Turma_01_Desafio_2_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA7604276A361100C68B0E /* Turma_01_Desafio_2_iOSApp.swift */; };
+		4EAA7605276A361100C68B0E /* Turma01Desafio02iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA7604276A361100C68B0E /* Turma01Desafio02iOS.swift */; };
 		4EAA7607276A361100C68B0E /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA7606276A361100C68B0E /* RepositoriesView.swift */; };
 		4EAA7609276A361200C68B0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA7608276A361200C68B0E /* Assets.xcassets */; };
 		4EAA760C276A361200C68B0E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA760B276A361200C68B0E /* Preview Assets.xcassets */; };
@@ -24,7 +24,7 @@
 		4E36DEA1276A8E2B00338252 /* PullRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestCell.swift; sourceTree = "<group>"; };
 		4E6BF250276A4D210019E4C4 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		4EAA7601276A361100C68B0E /* Turma-01-Desafio-2-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turma-01-Desafio-2-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EAA7604276A361100C68B0E /* Turma_01_Desafio_2_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turma_01_Desafio_2_iOSApp.swift; sourceTree = "<group>"; };
+		4EAA7604276A361100C68B0E /* Turma01Desafio02iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turma01Desafio02iOS.swift; sourceTree = "<group>"; };
 		4EAA7606276A361100C68B0E /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
 		4EAA7608276A361200C68B0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EAA760B276A361200C68B0E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				4E6BF252276A4D500019E4C4 /* Views */,
-				4EAA7604276A361100C68B0E /* Turma_01_Desafio_2_iOSApp.swift */,
+				4EAA7604276A361100C68B0E /* Turma01Desafio02iOS.swift */,
 				4EAA7608276A361200C68B0E /* Assets.xcassets */,
 				4EAA760A276A361200C68B0E /* Preview Content */,
 			);
@@ -195,7 +195,7 @@
 				4EAA7624276A49FB00C68B0E /* UserView.swift in Sources */,
 				4E36DE9E276A68F800338252 /* SearchBar.swift in Sources */,
 				4E36DEA0276A873700338252 /* PullsView.swift in Sources */,
-				4EAA7605276A361100C68B0E /* Turma_01_Desafio_2_iOSApp.swift in Sources */,
+				4EAA7605276A361100C68B0E /* Turma01Desafio02iOS.swift in Sources */,
 				4E6BF251276A4D210019E4C4 /* RepositoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

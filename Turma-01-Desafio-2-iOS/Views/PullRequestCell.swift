@@ -5,8 +5,7 @@ struct PullRequestCell: View {
 
     var body: some View {
 
-        Button(action: { openURL(URL(string: "https://github.com/pedrogaldiano/Turma-01-Desafio-2-iOS")!
-        )}) {
+        Button(action: { openURL(URL(string: "https://github.com/pedrogaldiano/Turma-01-Desafio-2-iOS")!) }, label: {
         VStack(alignment: .leading, spacing: 3) {
 
             HStack {
@@ -36,7 +35,7 @@ struct PullRequestCell: View {
                 .lineLimit(1)
                 .foregroundColor(.secondary)
         }
-        }
+        })
     }
 }
 
