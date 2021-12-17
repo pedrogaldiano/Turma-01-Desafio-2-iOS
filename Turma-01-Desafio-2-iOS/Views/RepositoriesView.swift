@@ -7,7 +7,7 @@ struct RepositoriesView: View {
     var body: some View {
 
         NavigationView {
-            List { ForEach(repos.items) { repo in
+            List { ForEach(repos.repos) { repo in
                 NavigationLink(
                     destination: PullsView(fullName: repo.fullName, repoName: repo.name),
                     label: { RepositoryCell(repo: repo) }
@@ -15,11 +15,8 @@ struct RepositoriesView: View {
                     .onAppear(perform: {
                         repos.loadMoreContentIfNeeded(currentItem: repo)
                     })
-            }
-
-            }
+            }}
             .navigationTitle("Repos em Swift")
-
         }
         .navigationViewStyle(.stack)
 //        .searchable(text: $searchText)

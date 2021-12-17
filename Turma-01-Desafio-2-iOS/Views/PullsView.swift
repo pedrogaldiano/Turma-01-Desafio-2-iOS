@@ -8,14 +8,12 @@ struct PullsView: View {
     var body: some View {
 
         NavigationView {
-            List(pulls.pulls) { pull in
+            List { ForEach(pulls.pulls) { pull in
                 PullRequestCell(pull: pull)
                     .foregroundColor(.black)
-            }
+                    .onAppear(perform: { pulls.loadMoreContentIfNeeded(currentItem: pull, fullName: fullName)})
+            }}
             .navigationTitle(repoName)
-            .onAppear(perform: {
-                pulls.getPullRequestsFromRepo(fullName: fullName)
-            })
         }
         .navigationTitle("Pull Requests")
         .navigationViewStyle(.stack)

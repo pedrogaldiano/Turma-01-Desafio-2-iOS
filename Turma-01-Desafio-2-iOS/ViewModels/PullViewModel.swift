@@ -2,8 +2,26 @@ import Foundation
 
 final class PullViewModel: ObservableObject {
     @Published var pulls: [Pull] = []
+    @Published var fullName: String = ""
+    @Published var isLoading = false
+    private var currentPage = 1
 
-    func getPullRequestsFromRepo(fullName: String) {
+    init() {
+        loadMoreContent(fullName: fullName)
+    }
+
+    func loadMoreContentIfNeeded(currentItem item: Pull?, fullName: String) {
+        guard let item = item else {
+            loadMoreContent(fullName: fullName)
+            return
+        }
+        let thresholdIndex = pulls.index(pulls.endIndex, offsetBy: -1)
+        if pulls.firstIndex(where: { $0.id == item.id }) == thresholdIndex {
+            loadMoreContent(fullName: fullName)
+        }
+    }
+
+    func loadMoreContent(fullName: String) {
 
         guard let url = URL(string: "https://api.github.com/repos/\(fullName)/pulls")
         else { return }
@@ -18,8 +36,11 @@ final class PullViewModel: ObservableObject {
                 let response = try decoder.decode([Pull].self, from: data)
 
                 DispatchQueue.main.async {
-                    self?.pulls = response
-                    print(String(describing: self?.pulls))
+                    self?.currentPage += 1
+                    self?.isLoading = false
+                    self?.pulls.append(contentsOf: response)
+
+                    print("here\n\n")
                 }
             } catch {
                 print("ERROR:\n\(error)\n\n")

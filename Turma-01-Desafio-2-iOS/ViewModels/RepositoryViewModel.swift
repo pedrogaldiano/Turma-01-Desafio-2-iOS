@@ -1,10 +1,9 @@
 import Foundation
 
 final class RepositoryViewModel: ObservableObject {
-    @Published var items: [Item] = []
+    @Published var repos: [Item] = []
     @Published var isLoadingPage = false
     private var currentPage = 1
-    private var canLoadMorePages = true
 
     init() {
         loadMoreContent()
@@ -15,13 +14,13 @@ final class RepositoryViewModel: ObservableObject {
             loadMoreContent()
             return
         }
-        let thresholdIndex = items.index(items.endIndex, offsetBy: -1)
-        if items.firstIndex(where: { $0.id == item.id }) == thresholdIndex {
+        let thresholdIndex = repos.index(repos.endIndex, offsetBy: -1)
+        if repos.firstIndex(where: { $0.id == item.id }) == thresholdIndex {
             loadMoreContent()
         }
     }
-    private func loadMoreContent(repoName: String = "") {
 
+    private func loadMoreContent(repoName: String = "") {
         guard !isLoadingPage else { return }
         isLoadingPage = true
 
@@ -41,7 +40,7 @@ final class RepositoryViewModel: ObservableObject {
                     self?.currentPage += 1
                     self?.isLoadingPage = false
 
-                    self?.items.append(contentsOf: response.items)
+                    self?.repos.append(contentsOf: response.items)
 
                 }
             } catch {
