@@ -5,7 +5,7 @@ final class PullViewModel: ObservableObject {
 
     func getPullRequestsFromRepo(fullName: String) {
 
-        guard let url = URL(string: "https://api.github.com/repos/vsouza/\(fullName)/pulls")
+        guard let url = URL(string: "https://api.github.com/repos/\(fullName)/pulls")
         else { return }
 
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
@@ -14,6 +14,7 @@ final class PullViewModel: ObservableObject {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
+                decoder.dateDecodingStrategy = .iso8601
                 let response = try decoder.decode([Pull].self, from: data)
 
                 DispatchQueue.main.async {
