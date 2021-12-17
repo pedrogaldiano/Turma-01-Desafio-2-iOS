@@ -7,24 +7,25 @@ struct RepositoriesView: View {
     var body: some View {
 
         NavigationView {
-            List { ForEach(repos.repositories.items) { repo in
+            List { ForEach(repos.items) { repo in
                 NavigationLink(
                     destination: PullsView(fullName: repo.fullName, repoName: repo.name),
                     label: { RepositoryCell(repo: repo) }
                 )
+                    .onAppear(perform: {
+                        repos.loadMoreContentIfNeeded(currentItem: repo)
+                    })
             }
 
             }
             .navigationTitle("Repos em Swift")
-            .onAppear(perform: {
-                repos.searchSwiftRepoByName()
-            })
+
         }
         .navigationViewStyle(.stack)
-        .searchable(text: $searchText)
-        .onSubmit(of: .search) {
-            print(searchText)
-        }
+//        .searchable(text: $searchText)
+//        .onSubmit(of: .search) {
+//            print(searchText)
+//        }
     }
 
 }
