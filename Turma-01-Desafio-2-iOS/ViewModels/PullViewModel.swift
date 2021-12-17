@@ -14,7 +14,6 @@ final class PullViewModel: ObservableObject {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-
                 let response = try decoder.decode([Pull].self, from: data)
 
                 DispatchQueue.main.async {

@@ -17,6 +17,7 @@ final class RepositoryViewModel: ObservableObject {
                 let response = try decoder.decode(Repositories.self, from: data)
 
                 DispatchQueue.main.async {
+                    print("repo view model")
                     self?.repositories = response
 //                    print(String(describing: self?.repositories))
                 }

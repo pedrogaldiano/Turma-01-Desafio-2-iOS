@@ -8,14 +8,15 @@ struct RepositoriesView: View {
 
         NavigationView {
             List { ForEach(repos.repositories.items) { repo in
-                NavigationLink(destination: PullsView(fullName: repo.fullName, repoName: repo.name), label: {
-                    RepositoryCell(repo: repo)
-                })
+                NavigationLink(
+                    destination: PullsView(fullName: repo.fullName, repoName: repo.name),
+                    label: { RepositoryCell(repo: repo) }
+                )
             }
 
             }
             .navigationTitle("Repos em Swift")
-            .navigationBarItems(leading: Button("API Call") {
+            .onAppear(perform: {
                 repos.searchSwiftRepoByName()
             })
         }

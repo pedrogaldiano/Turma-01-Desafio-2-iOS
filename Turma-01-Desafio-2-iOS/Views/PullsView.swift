@@ -13,14 +13,9 @@ struct PullsView: View {
                     .foregroundColor(.black)
             }
             .navigationTitle(repoName)
-            .navigationBarItems(leading: Button("API Call") {
+            .onAppear(perform: {
                 pulls.getPullRequestsFromRepo(fullName: fullName)
-                print("api called")
             })
-
-//            .onAppear {
-//                pulls.getPullRequestsFromRepo(url: urlPullRequests)
-//            }
         }
         .navigationTitle("Pull Requests")
         .navigationViewStyle(.stack)
