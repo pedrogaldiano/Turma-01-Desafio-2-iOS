@@ -6,11 +6,15 @@ final class PullViewModel: ObservableObject {
     @Published var isLoading = false
     private var currentPage = 1
 
-    init() {
+    init(fullName: String) {
+        self.fullName = fullName
+    }
+
+    func initialize() {
         loadMoreContent(fullName: fullName)
     }
 
-    func loadMoreContentIfNeeded(currentItem item: Pull?, fullName: String) {
+    func loadMoreContentIfNeeded(currentItem item: Pull?) {
         guard let item = item else {
             loadMoreContent(fullName: fullName)
             return
@@ -22,8 +26,7 @@ final class PullViewModel: ObservableObject {
     }
 
     func loadMoreContent(fullName: String) {
-
-        guard let url = URL(string: "https://api.github.com/repos/\(fullName)/pulls")
+        guard let url = URL(string: "https://api.github.com/repos/\(fullName)/pulls?page=\(currentPage)")
         else { return }
 
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
@@ -39,8 +42,6 @@ final class PullViewModel: ObservableObject {
                     self?.currentPage += 1
                     self?.isLoading = false
                     self?.pulls.append(contentsOf: response)
-
-                    print("here\n\n")
                 }
             } catch {
                 print("ERROR:\n\(error)\n\n")

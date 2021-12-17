@@ -5,7 +5,7 @@ struct PullRequestCell: View {
     var pull: Pull
     var body: some View {
 
-        Button(action: { openURL(URL(string: "https://github.com/pedrogaldiano/Turma-01-Desafio-2-iOS")!) }, label: {
+        Button(action: { openURL(URL(string: pull.htmlUrl)!) }, label: {
         VStack(alignment: .leading, spacing: 3) {
 
             HStack {
@@ -23,7 +23,7 @@ struct PullRequestCell: View {
             }
             UserView(owner: pull.user)
 
-            Text(pull.body)
+            Text(pull.body ?? "")
                 .font(.body)
                 .fontWeight(.light)
                 .lineLimit(2)

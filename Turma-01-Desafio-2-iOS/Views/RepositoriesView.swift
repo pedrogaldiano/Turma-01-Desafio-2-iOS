@@ -19,10 +19,6 @@ struct RepositoriesView: View {
             .navigationTitle("Repos em Swift")
         }
         .navigationViewStyle(.stack)
-//        .searchable(text: $searchText)
-//        .onSubmit(of: .search) {
-//            print(searchText)
-//        }
     }
 
 }

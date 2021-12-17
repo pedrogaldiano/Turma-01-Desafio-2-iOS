@@ -1,9 +1,13 @@
 import SwiftUI
 
 struct PullsView: View {
-    var fullName: String
     var repoName: String
-    @StateObject var pulls = PullViewModel()
+    @ObservedObject var pulls: PullViewModel
+
+    init(fullName: String, repoName: String) {
+        self.repoName = repoName
+        pulls = PullViewModel(fullName: fullName)
+    }
 
     var body: some View {
 
@@ -11,12 +15,15 @@ struct PullsView: View {
             List { ForEach(pulls.pulls) { pull in
                 PullRequestCell(pull: pull)
                     .foregroundColor(.black)
-                    .onAppear(perform: { pulls.loadMoreContentIfNeeded(currentItem: pull, fullName: fullName)})
+                    .onAppear(perform: { pulls.loadMoreContentIfNeeded(currentItem: pull )})
             }}
             .navigationTitle(repoName)
         }
         .navigationTitle("Pull Requests")
         .navigationViewStyle(.stack)
+        .onAppear {
+            pulls.initialize()
+        }
 
     }
 

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E36DE9E276A68F800338252 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36DE9D276A68F800338252 /* SearchBar.swift */; };
 		4E36DEA0276A873700338252 /* PullsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36DE9F276A873700338252 /* PullsView.swift */; };
 		4E36DEA2276A8E2B00338252 /* PullRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36DEA1276A8E2B00338252 /* PullRequestCell.swift */; };
 		4E6BF251276A4D210019E4C4 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6BF250276A4D210019E4C4 /* RepositoryCell.swift */; };
@@ -24,7 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E36DE9D276A68F800338252 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		4E36DE9F276A873700338252 /* PullsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullsView.swift; sourceTree = "<group>"; };
 		4E36DEA1276A8E2B00338252 /* PullRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestCell.swift; sourceTree = "<group>"; };
 		4E6BF250276A4D210019E4C4 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 				4E36DEA1276A8E2B00338252 /* PullRequestCell.swift */,
 				4EAA7623276A49FB00C68B0E /* UserView.swift */,
 				4E6BF250276A4D210019E4C4 /* RepositoryCell.swift */,
-				4E36DE9D276A68F800338252 /* SearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -229,7 +226,6 @@
 				4EB17C49276B7A8700DBB7A2 /* RepositoryViewModel.swift in Sources */,
 				4EB17C4C276B7DAD00DBB7A2 /* RepositoryModel.swift in Sources */,
 				4EAA7624276A49FB00C68B0E /* UserView.swift in Sources */,
-				4E36DE9E276A68F800338252 /* SearchBar.swift in Sources */,
 				4E36DEA0276A873700338252 /* PullsView.swift in Sources */,
 				4EAA7605276A361100C68B0E /* Turma01Desafio02iOS.swift in Sources */,
 				4E6BF251276A4D210019E4C4 /* RepositoryCell.swift in Sources */,
