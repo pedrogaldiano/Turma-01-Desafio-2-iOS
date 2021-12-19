@@ -1,5 +1,7 @@
 # Desafio iOS
 
+![vaivoa](vaivoa.png)
+
 ## Criar um aplicativo para consultar a API do GitHub ##
 Criar um aplicativo para consultar a API do GitHub e trazer os repositórios mais populares de Swift.
 
@@ -17,16 +19,21 @@ Criar um aplicativo para consultar a API do GitHub e trazer os repositórios mai
 - Cada item da lista deve exibir Nome / Foto do autor do PR, Título do PR, Data do PR e Body do PR
 - Ao tocar em um item, deve abrir no browser a página do Pull Request em questão
 
+### Telas
+![telas](telas.png)
+
+
 ### A solução DEVE conter
--    Versão mínima do iOS : 13.*
+-    Versão mínima do iOS : 13.0
 -    Arquivo .gitignore
 -    Usar Viewcode
 -    Gestão de dependências no projeto. Ex: Cocoapods
 -    Framework para Comunicação com API. Ex: Alamofire
 -    Mapeamento json -> Objeto . Ex: ObjectMapper
--    Cache de Imagens. Ex SDWebImage
+    > Optei por não utilizar um Framework para a comunicação e para o mapeamento de objetos. Tendo em vista de que se tratava de requisições GET simples, o Swfit foi perfeitamente capaz em lidar com o mapeamento de dados e com as requisições.
+-    Cache de Imagens. Ex SDWebImage 
 -    Suporte devices a partir do iPhone 5s.
--    Desenvolvido em Swift 5+ e Xcode 13.1.
+-    Desenvolvido em Swift 5+ e Xcode 13.1. 
 
 ### **Ganha + pontos se conter** ###
 -    Persistir os dados no CoreData
@@ -38,7 +45,6 @@ Criar um aplicativo para consultar a API do GitHub e trazer os repositórios mai
 -    App Universal , Ipad | Iphone | Landscape | Portrait (Size Classes)
 
 ### **Ganha ++ pontos se usar** ###
-
 -    SwiftUI com Combine.
 
 ### Sugestões ###
